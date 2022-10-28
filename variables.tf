@@ -77,6 +77,12 @@ variable "allow_nested_items_to_be_public" {
   default     = false
 }
 
+variable "public_network_access_enabled" {
+  description = "Allow or disallow public network access."
+  type = bool
+  default = true
+}
+
 # Note: make sure to include the IP address of the host from where "terraform" command is executed to allow for access to the storage
 # Otherwise, creating container inside the storage or any access attempt will be denied.
 variable "access_list" {
